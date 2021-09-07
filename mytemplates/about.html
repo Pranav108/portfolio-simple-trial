@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block about%}active{% endblock %}
+{% block title %}ContactUs{% endblock %}
+{% block body %}
+<div class="container my-5">
+  <form action="/about" method="POST">
+    {% csrf_token %}
+    <div class="form-group my-3">
+      <label for="FullName">Full Name: </label>
+      <input type="name" class="form-control" id="FullName" name="FullName" placeholder="Enter your Full Name here " />
+    </div>
+    <div class="form-group my-1">
+      <label for="emailInfo">Email address</label>
+      <input type="email" class="form-control" id="emailInfo" aria-describedby="emailHelp" name="emailInfo"
+        placeholder="abc@nitm.ac.in" />
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group my-1">
+      <label for="phone">Phonenumber</label>
+      <input type="phone" class="form-control" id="phone" name="phone" placeholder="phonenumber" />
+    </div>
+    <div class="form-group my-2">
+      <label for="desc"> Enter your Description here</label>
+      <textarea class="form-control" id="desc" name="desc" rows="3"></textarea>
+    </div>
+    <!-- <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="checkbox" name="checkBox" />
+      <label class="form-check-label" for="checkBox">Check me out</label>
+    </div> -->
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+{% endblock body %}

@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+{% block info %}active{% endblock %}
+{% block title %}Projects{% endblock %}
+{% block projectStyle%}
+<link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap&family=Stardos+Stencil:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+          padding: 0;
+          margin: 0;
+            background-color: #e8e8e8 !important; 
+            align-items: center;
+        }
+        
+        h1 {
+            text-align: center;
+            font-family: 'Fredericka the Great', cursive;
+            text-transform: capitalize;
+            color: darkgreen;
+            margin-bottom: 8%;
+        }
+        
+        .container div {
+            display: flex;
+            margin-bottom: 5%;
+            padding: 3%;
+            border: 5px solid green;
+            border-radius: 25px;
+        }
+        /* .p-1,
+        .p-2,
+        .p-3,
+        .p-4,
+        .p-5 {
+            margin: 3%;
+            padding: 3%;
+            margin-left: 3px;
+            text-align: justify;
+            clear: none;
+        } */
+        h3 {
+            text-align: center;
+            margin-top: 0px;
+            margin-bottom: -10%;
+            text-transform: uppercase;
+        }
+        #info {
+            font-family: 'Stardos Stencil', cursive;
+            font-size: 35px;
+            border: none;
+            margin-top: 5%;
+            margin-bottom: 3%;
+            color: darkslateblue;
+            padding: 3%;
+            padding-left: 10%;
+            box-shadow: 3px 3px 5px #6d6c6c80, -10px -10px 20px rgb(252, 250, 250);
+        }
+    </style>
+{% endblock %}
+{% block body %}
+<div class="container">
+  <div id="info">Name: Pranav Pratap Singh<br> Roll No.: B19CS034<br> College : NIT Meghalaya
+  </div>
+  <hr style="width: 90%;">
+  <h1>These are my collection of C++ Codes... </h1>
+  <h3>Sortings...</h3>
+  <div style=" background-color: #a6b3fc;
+  border: 5px solid #005298;">
+      <ol>
+          <li><a href="https://ide.geeksforgeeks.org/1WU4GrbhJb">Selection Sort</a></li>
+          <li><a href="https://ide.geeksforgeeks.org/cpJbX66QZA">Insertion Sort</a></li>
+      </ol>
+  </div>
+  <h3>Recursion...</h3>
+  <div style="background-color: #db91a1;
+  border: 5px inset #F44336">
+      <ol>
+          <li><a href="https://ide.geeksforgeeks.org/TQXIdkL1RQ">taylor_series using recursion</a></li>
+          <li><a href="https://ide.geeksforgeeks.org/Wb49kLWDC7">Taylor's series (horne method)</a></li>
+          <li><a href="https://ide.geeksforgeeks.org/AoUZ7aRKQb">nCr using Recursion(pascal's triangle)</a></li>
+          <li><a href="https://ide.geeksforgeeks.org/nVnNZi1osN">Fibonacci Series using Recursion - Memoization</a></li>
+      </ol>
+  </div>
+  <h3>Linked-list</h3>
+  <div style=" background-color: #c7abf7;
+  border: 5px outset #673AB7;">
+      <ol>
+          <li><a href="https://ide.geeksforgeeks.org/Vhr4ea0YAY">Display Linked-list</a></li>
+          <li><a href="https://ide.geeksforgeeks.org/mIdOg0Lkbu">Insertion of element</a></li>
+          <li><a href="https://ide.geeksforgeeks.org/Pyv9jb2UBz">Sum and Size of list</a></li>
+          <li><a href="https://ide.geeksforgeeks.org/QEMW2P5kMZ">Maximum element in List</a></li>
+          <li><a href="https://ide.geeksforgeeks.org/iDLlF11rGP">Remove duplicate element in sorted list</a></li>
+          <li><a href="https://ide.geeksforgeeks.org/HLakLbHHsN">Check for sorted list</a></li>
+          <li><a href="https://ide.geeksforgeeks.org/avDfrCzObO">Deletion of nodes</a></li>
+          <li><a href="https://ide.geeksforgeeks.org/HF7T8eYr6t">Reversing the Linked-list</a></li>
+      </ol>
+  </div>
+  <h3>Binary Tree</h3>
+  <div style=" background-color: #f8996d;
+  border: 5px groove #ce5835;">
+  <ol>
+    <li><a href="https://ide.geeksforgeeks.org/Vhr4ea0YAY">Lorem ipsum dolor sit amet con</a></li>
+    <li><a href="https://ide.geeksforgeeks.org/Vhr4ea0YAY">Lorem ipsum dolor sit amet con</a></li>
+    <li><a href="https://ide.geeksforgeeks.org/Vhr4ea0YAY">Lorem ipsum dolor sit amet con</a></li>
+    <li><a href="https://ide.geeksforgeeks.org/Vhr4ea0YAY">Lorem ipsum dolor sit amet con</a></li>
+    <li><a href="https://ide.geeksforgeeks.org/Vhr4ea0YAY">Lorem ipsum dolor sit amet con</a></li>
+    <li><a href="https://ide.geeksforgeeks.org/Vhr4ea0YAY">Lorem ipsum dolor sit amet con</a></li>
+    <li><a href="https://ide.geeksforgeeks.org/Vhr4ea0YAY">Lorem ipsum dolor sit amet con</a></li>
+    <li><a href="https://ide.geeksforgeeks.org/Vhr4ea0YAY">Lorem ipsum dolor sit amet con</a></li>
+  </ol>
+  </div>
+  <h3>Graph</h3>
+  <div style="background-color: #58f35e;
+  border: 5px ridge #388E3C;">
+  <ol>
+    <li><a href="https://ide.geeksforgeeks.org/Vhr4ea0YAY">Lorem ipsum dolor sit amet con</a></li>
+    <li><a href="https://ide.geeksforgeeks.org/Vhr4ea0YAY">Lorem ipsum dolor sit amet con</a></li>
+    <li><a href="https://ide.geeksforgeeks.org/Vhr4ea0YAY">Lorem ipsum dolor sit amet con</a></li>
+    <li><a href="https://ide.geeksforgeeks.org/Vhr4ea0YAY">Lorem ipsum dolor sit amet con</a></li>
+    <li><a href="https://ide.geeksforgeeks.org/Vhr4ea0YAY">Lorem ipsum dolor sit amet con</a></li>
+    <li><a href="https://ide.geeksforgeeks.org/Vhr4ea0YAY">Lorem ipsum dolor sit amet con</a></li>
+    <li><a href="https://ide.geeksforgeeks.org/Vhr4ea0YAY">Lorem ipsum dolor sit amet con</a></li>
+    <li><a href="https://ide.geeksforgeeks.org/Vhr4ea0YAY">Lorem ipsum dolor sit amet con</a></li>
+  
+</ol>
+  </div>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,210 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Homepage{% endblock %}
+{% block home %}active{% endblock %}
+{% block skillBarStyle %}
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+* {
+  padding: 0px;
+  margin: 0px;
+  /* box-sizing: border-box; */
+}
+
+html,
+body {
+  /* display: grid; */
+  height: 100%;
+  background-color: white;
+  place-items: center;
+}
+
+.HomeSkillBar {
+  margin: auto;
+  width: 80%;
+  border-radius: 20px;
+  background-color: #f0f0f0;
+  padding: 20px 30px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, .2);
+}
+
+.HomeSkillBar .bar {
+  margin: 15px 0;
+}
+
+.HomeSkillBar  .bar .info span {
+  font-size: 25px;
+  font-weight: 300;
+}
+
+.HomeSkillBar .bar .progress-line {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, .1);
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+@keyframes animate {
+  100% {
+      transform: scaleX(1);
+  }
+}
+
+.HomeSkillBar .bar .progress-line span {
+  position: absolute;
+  height: 100%;
+  width: 80%;
+  border-radius: 5px;
+  background-color: royalblue;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+.HomeSkillBar .progress-line.html span {
+  width: 96%;
+}
+
+.HomeSkillBar .progress-line.css span {
+  width: 85%;
+}
+
+.HomeSkillBar .progress-line.js span {
+  width: 43%;
+}
+
+.HomeSkillBar .progress-line.python span {
+  width: 37%;
+}
+
+.HomeSkillBar .progress-line.c span {
+  width: 90%;
+}
+
+.HomeSkillBar .bar .progress-line span::before {
+  position: absolute;
+  content: "";
+  height: 0;
+  width: 0;
+  right: 0;
+  border: 7px solid transparent;
+  top: -7px;
+  border-bottom-width: 0;
+  border-right-width: 0;
+  border-top-color: #000;
+  opacity: 0;
+  animation: showText 1.8s 4s linear forwards;
+}
+
+@keyframes showText {
+  100% {
+      opacity: 1;
+  }
+}
+
+.HomeSkillBar .bar .progress-line span::after {
+  position: absolute;
+  right: 0;
+  top: -28px;
+  color: white;
+  font-size: 16px;
+  font-weight: 550;
+  background-color: black;
+  padding: 3px 8px;
+  border-radius: 5px;
+  opacity: 0;
+  animation: showText .8s 1.5s linear forwards;
+}
+
+.HomeSkillBar .progress-line.html span::after {
+  content: "96%";
+}
+
+.HomeSkillBar .progress-line.css span::after {
+  content: "85%";
+}
+
+.HomeSkillBar .progress-line.js span::after {
+  content: "43%";
+}
+
+.HomeSkillBar .progress-line.python span::after {
+  content: "37%";
+}
+
+.HomeSkillBar .progress-line.c span::after {
+  content: "90%";
+}
+</style>
+{% endblock %}
+{% block body %}
+<h2 class=" text-center my-4" style="font-family: 'Special Elite', cursive;">My Skills</h2>
+<div class="HomeSkillBar my-4">
+  <div class="bar">
+      <div class="info">
+          <span>HTML</span>
+      </div>
+      <div class="progress-line html"><span></span></div>
+  </div>
+
+  <div class="bar">
+      <div class="info">
+          <span>CSS</span>
+      </div>
+      <div class="progress-line css"><span></span></div>
+  </div>
+  <div class="bar">
+      <div class="info">
+          <span>Java-Script</span>
+      </div>
+      <div class="progress-line js"><span></span></div>
+  </div>
+  <div class="bar">
+      <div class="info">
+          <span>Python</span>
+      </div>
+      <div class="progress-line python"><span></span></div>
+  </div>
+  <div class="bar">
+      <div class="info">
+          <span>C language</span>
+      </div>
+      <div class="progress-line c"><span></span></div>
+  </div>
+
+</div>
+<div class="container">
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner my-5">
+        <div class="carousel-item active">
+          <img src="{% static '/img/slide1.jpeg' %}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="{% static '/img/slide2.jpeg' %}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="{% static '/img/slide3.jpeg' %}" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+</div>
+{% endblock %}

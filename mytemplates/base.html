@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    {% block skillBarStyle %}{% endblock %}
+    {% block projectStyle %}{% endblock %}
+
+    <style>
+            #SocialIcons {
+                display: flex;
+                text-align: center;
+                list-style: none;
+                height: 100%;
+                align-items: center;
+                justify-content: center;
+                background-color: rgba(33,37,41);
+            }
+            #SocialIcons ul {
+                list-style: none;
+                display: flex;
+            }
+            #SocialIcons ul li {
+                position: relative;
+                height: 60px;
+                line-height: 60px;
+                color: rgb(255, 255, 255);
+                border-radius: 50%;
+                width: 60px;
+                font-size: 30px;
+                background-color: black;
+                margin: 0px 12px;
+                transition: .5s;
+            }
+
+            #SocialIcons ul li::before {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                border-radius: 50%;
+                /* background-color: rgb(255, 145, 0); */
+                z-index: -1;
+                transform: scale(.8);
+                transition: .5s;
+            }
+
+            #SocialIcons ul li:nth-child(1):hover:before {
+                filter: blur(3px);
+                transform: scale(1.3);
+                box-shadow: 0 0 15px blue;
+            }
+
+            #SocialIcons ul li:nth-child(1):hover {
+                color: blue;
+                box-shadow: 0 0 15px blue;
+                text-shadow: 0 0 15px blue;
+            }
+
+            #SocialIcons ul li:nth-child(2):hover:before {
+                filter: blur(3px);
+                transform: scale(1.3);
+                box-shadow: 0 0 15px rgb(238, 8, 180);
+            }
+
+            #SocialIcons ul li:nth-child(2):hover {
+                color: rgb(238, 8, 180);
+                box-shadow: 0 0 15px rgb(238, 8, 180);
+                text-shadow: 0 0 15px rgb(238, 8, 180);
+            }
+
+            #SocialIcons ul li:nth-child(3):hover:before {
+                filter: blur(3px);
+                transform: scale(1.3);
+                box-shadow: 0 0 15px blue;
+            }
+
+            #SocialIcons ul li:nth-child(3):hover {
+                color: blue;
+                box-shadow: 0 0 15px blue;
+                text-shadow: 0 0 15px blue;
+            }
+
+            #SocialIcons ul li:nth-child(4):hover:before {
+                filter: blur(3px);
+                transform: scale(1.3);
+                box-shadow: 0 0 15px rgb(38, 226, 14);
+            }
+
+            #SocialIcons ul li:nth-child(4):hover {
+                color: rgb(38, 226, 14);
+                box-shadow: 0 0 15px rgb(38, 226, 14);
+                text-shadow: 0 0 15px rgb(38, 226, 14);
+            }
+
+            #SocialIcons ul li:nth-child(5):hover:before {
+                filter: blur(3px);
+                transform: scale(1.3);
+                box-shadow: 0 0 15px blue;
+            }
+
+            #SocialIcons ul li:nth-child(5):hover {
+                color: blue;
+                box-shadow: 0 0 15px blue;
+                text-shadow: 0 0 15px blue;
+            } 
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>{% block title%}{% endblock%}</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">PranavCoder</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link {% block home%}{% endblock %}" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {% block info%}{% endblock %}" href="/info">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {% block about%}{% endblock %}" href="/about">ContactMe</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-primary" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      {% block body %}
+      {% endblock %}
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+      <!-- footer -->
+      <footer id="sticky-footer" class="py-4 bg-dark text-white-50 text-center">
+          <div id="SocialIcons">
+            <ul>
+                <li><i class="fab fa-linkedin-in"></i></li>
+                <li><i class="fab fa-instagram"></i></li>
+                <li><i class="fab fa-facebook-f"></i></li>
+                <li><i class="fab fa-google"></i></li>
+                <li><i class="fab fa-twitter"></i></li>
+            </ul>
+          </div>
+        <button class="btn-outline-light btn-dark border-4 rounded-pill px-2" onclick=" document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;">Back to top</button>
+        <span class="px-4">
+          <small>Copyright &copy; 2021 - Created by Pranav</small>
+        </span>
+      </footer>
+    
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
